@@ -2,6 +2,8 @@ import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import { INITIAL_EVENTS } from "./modules/event-util";
 
 const App = () => {
   const businessHours = [
@@ -20,7 +22,7 @@ const App = () => {
     <div>
       <h1>Hello laundry world!</h1>
       <FullCalendar
-        plugins={[dayGridPlugin, timeGridPlugin]}
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView="timeGridWeek"
         headerToolbar={{
           left: "prev,next today",
@@ -28,6 +30,7 @@ const App = () => {
           right: "timeGridWeek,timeGridDay",
         }}
         businessHours={businessHours}
+        initialEvents={INITIAL_EVENTS}
       />
     </div>
   );

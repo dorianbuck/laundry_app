@@ -8,6 +8,6 @@ describe("Visitor views the current weeks schedule", () => {
   });
 
   it("is expected to display the possible laundry timeslots", () => {
-    cy.get("data-cy=timeslots").should("have.length", 20);
+    cy.get("[data-cy=timeslots]").should("have.length", 20);
   });
 });
