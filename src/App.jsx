@@ -9,11 +9,11 @@ const App = () => {
       <h1>Hello laundry world!</h1>
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin]}
-        initialView="dayGridWeek"
+        initialView="timeGridWeek"
         headerToolbar={{
           left: 'prev,next today',
           center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          right: 'timeGridWeek,timeGridDay'
         }}
       />
     </div>
