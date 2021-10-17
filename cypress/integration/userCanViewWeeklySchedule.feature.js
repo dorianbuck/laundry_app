@@ -4,6 +4,6 @@ describe("Visitor views the current weeks schedule", () => {
   });
 
   it("is expected to display 7 days calendar", () => {
-    cy.get("[data-cy=schedule]").children().should("have.length", 7);
+    cy.get("th").should("have.length", 9);
   });
 });

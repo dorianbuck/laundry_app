@@ -4,12 +4,18 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 
 const App = () => {
-
-  const businessHours = {
-    daysOfWeek: [1, 2, 3, 5, 4, 6, 7],
-    startTime: '07:00',
-    endTime: '19:00'
-  }
+  const businessHours = [
+    {
+      daysOfWeek: [1, 2, 3, 4, 5],
+      startTime: "07:00",
+      endTime: "19:00",
+    },
+    {
+      daysOfWeek: [6],
+      startTime: "10:00",
+      endTime: "19:00",
+    },
+  ];
   return (
     <div>
       <h1>Hello laundry world!</h1>
